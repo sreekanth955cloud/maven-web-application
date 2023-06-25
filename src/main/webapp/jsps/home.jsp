@@ -1,54 +1,106 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.net.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>MithunTechnologies- Home Page</title>
-<link href="images/mithunlogo.jpg" rel="icon">
-</head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
 </head>
 <body>
-<h1 align="center">Welcome to Mithun Technologies. Ph No: +91-9980923226 Marathahalli,Bengaluru,Karnataka </h1>
-<h1 align="center"> Mithun Technologies- Very Good Training center for DevOps with AWS in Bangalore India and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
-<hr>
-<br>
-	<h1><h3> Server Side IP Address </h3><br>
 
-<% 
-String ip = "";
-InetAddress inetAddress = InetAddress.getLocalHost();
-ip = inetAddress.getHostAddress();
-out.println("Server Host Name :: "+inetAddress.getHostName()); 
-%>
-<br>
-<%out.println("Server IP Address :: "+ip);%>
-</h1>
-<br>
-<h1><h3> Client Side IP Address </h3><br>
-<%out.print( "Client IP Address :: " + request.getRemoteAddr() ); %><br>
-<%out.print( "Client Name Host :: "+ request.getRemoteHost() );%><br></h1>
-<hr>
-<div style="text-align: center;">
-	<span>
-		<img src="images/mithunlogo.jpg" alt="" width="100">
-	</span>
-	<span style="font-weight: bold;">
-		Mithun Technologies, 
-		Martha Halli, Above ICICI Bank, Beside Meghana Foods,
-		Bangalore,
-		+91-9980923226,+91-9900012028
-		devopstrainingblr@gmail.com
-		<br>
-		<a href="mailto:devopstrainingblr@gmail.com">Mail to Mithun Technologies</a>
-	</span>
-</div>
-<hr>
-	<p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
-<hr>
-<hr>
-<p align=center>Mithun Technologies - Consultant, Training, Development Center.</p>
-<p align=center><small>Copyrights 2022 by <a href="http://mithuntechnologies.com/">Mithun Technologies,Bengaluru</a> </small></p>
+<h2>CSS Layout Float</h2>
+<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
+<p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p>
+
+<header>
+  <h2>Cities</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>London</h1>
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
 
 </body>
 </html>
