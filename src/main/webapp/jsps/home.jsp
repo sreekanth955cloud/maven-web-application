@@ -74,7 +74,7 @@ footer {
 </head>
 <body>
 
-<h2>Web Hooks</h2>
+<h2>Web Hooks sample</h2>
 <p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
 <p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p>
 
